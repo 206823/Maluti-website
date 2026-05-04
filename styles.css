@@ -1,4 +1,4 @@
-/* RESET & BASE */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,24 +7,24 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #fefefe;
-  color: #111827;
+  background-color: #f8fafc;
+  color: #0f172a;
   scroll-behavior: smooth;
 }
 
-/* custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #e2e8f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f97316;
+  background: #2c5f8a;
   border-radius: 12px;
 }
 
-/* TYPOGRAPHY */
+
 h1, h2, h3, h4 {
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -42,29 +42,30 @@ h2 {
   margin-bottom: 2.5rem;
 }
 .section-header h2 {
-  background: linear-gradient(135deg, #1E2A5E, #F97316);
+  background: linear-gradient(135deg, #1e3a5f, #2c5f8a);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
   font-size: 2.3rem;
 }
+
 .section-header .accent-line {
   width: 70px;
   height: 4px;
-  background: #F97316;
+  background: #2e7d32;  /* green */
   margin: 0.75rem auto 0;
   border-radius: 4px;
 }
 
-/* HEADER & NAV (glass) */
+/* HEADER & NAV */
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .navbar {
@@ -85,7 +86,7 @@ header {
 .logo-img {
   height: 44px;
   width: auto;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
   transition: transform 0.2s ease;
 }
 .logo-img:hover {
@@ -94,7 +95,7 @@ header {
 .logo-text {
   font-size: 1.5rem;
   font-weight: 800;
-  background: linear-gradient(130deg, #1E2A5E, #F97316);
+  background: linear-gradient(130deg, #1e3a5f, #2c5f8a);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -108,13 +109,13 @@ header {
 }
 .nav-links li {
   font-weight: 600;
-  color: #1f2937;
+  color: #1e293b;
   cursor: pointer;
   transition: 0.2s;
   position: relative;
 }
 .nav-links li:hover {
-  color: #F97316;
+  color: #2e7d32;  
 }
 .nav-links li::after {
   content: '';
@@ -123,7 +124,7 @@ header {
   left: 0;
   width: 0;
   height: 2px;
-  background: #F97316;
+  background: #2e7d32;  
   transition: 0.25s;
 }
 .nav-links li:hover::after {
@@ -131,7 +132,7 @@ header {
 }
 
 .apply-btn {
-  background: linear-gradient(95deg, #F97316, #ea580c);
+  background: #2c5f8a;  
   border: none;
   padding: 10px 26px;
   border-radius: 40px;
@@ -139,26 +140,25 @@ header {
   font-size: 0.9rem;
   color: white;
   cursor: pointer;
-  box-shadow: 0 8px 18px rgba(249,115,22,0.25);
+  box-shadow: 0 2px 6px rgba(44, 95, 138, 0.2);
   transition: all 0.25s ease;
 }
 .apply-btn:hover {
+  background: #1e3a5f;
   transform: translateY(-2px);
-  box-shadow: 0 14px 24px rgba(249,115,22,0.35);
-  background: linear-gradient(95deg, #ea580c, #F97316);
+  box-shadow: 0 6px 12px rgba(44, 95, 138, 0.25);
 }
 
 .sub-nav {
   display: flex;
   gap: 2rem;
   padding: 0.7rem 2rem;
-  background: #ffffffd9;
-  backdrop-filter: blur(4px);
-  border-top: 1px solid rgba(0,0,0,0.05);
-  border-bottom: 1px solid rgba(0,0,0,0.03);
-  font-weight: 600;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  font-weight: 500;
   font-size: 0.85rem;
-  color: #4b5563;
+  color: #334155;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -168,8 +168,8 @@ header {
   padding: 4px 0;
 }
 .sub-nav span:hover {
-  color: #F97316;
-  border-bottom: 2px solid #F97316;
+  color: #2e7d32;  
+  border-bottom: 2px solid #2e7d32;
 }
 
 /* HERO SECTION */
@@ -180,7 +180,8 @@ header {
   align-items: center;
   gap: 3rem;
   padding: 1rem 2rem;
-  background: radial-gradient(circle at 0% 30%, rgba(30,42,94,0.03), transparent 70%);
+  background: #f1f5f9;
+  border-radius: 2rem;
 }
 .hero-text {
   flex: 1;
@@ -189,7 +190,7 @@ header {
   font-size: 3.4rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(125deg, #1E2A5E 30%, #F97316 80%);
+  background: linear-gradient(125deg, #1e3a5f 30%, #2c5f8a 80%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -198,7 +199,7 @@ header {
 .hero-text p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color: #2d3a4b;
+  color: #334155;
   margin-bottom: 2rem;
   max-width: 90%;
 }
@@ -208,7 +209,7 @@ header {
   flex-wrap: wrap;
 }
 .btn-primary {
-  background: #F97316;
+  background: #2e7d32;  
   border: none;
   padding: 12px 28px;
   border-radius: 40px;
@@ -217,24 +218,24 @@ header {
   font-size: 0.9rem;
   cursor: pointer;
   transition: 0.2s;
-  box-shadow: 0 4px 10px rgba(249,115,22,0.3);
+  box-shadow: 0 2px 6px rgba(46, 125, 50, 0.2);
 }
 .btn-primary:hover {
-  background: #ea580c;
+  background: #1b5e20;
   transform: scale(1.02);
 }
 .btn-outline {
   background: transparent;
-  border: 2px solid #F97316;
+  border: 2px solid #2c5f8a;  
   padding: 10px 26px;
   border-radius: 40px;
   font-weight: 700;
-  color: #F97316;
+  color: #2c5f8a;
   cursor: pointer;
   transition: 0.2s;
 }
 .btn-outline:hover {
-  background: #F97316;
+  background: #2c5f8a;
   color: white;
   transform: translateY(-2px);
 }
@@ -247,7 +248,7 @@ header {
   width: 100%;
   max-width: 480px;
   border-radius: 32px;
-  box-shadow: 30px 30px 40px -20px rgba(0,0,0,0.25), 0 10px 20px -5px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   object-fit: cover;
 }
@@ -255,7 +256,7 @@ header {
   transform: scale(1.01);
 }
 
-/* OFFERS (cards) */
+
 .offers {
   max-width: 1300px;
   margin: 4rem auto;
@@ -268,44 +269,71 @@ header {
   margin-top: 1.5rem;
 }
 .card {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(2px);
+  background: white;
   border-radius: 28px;
   padding: 1.8rem 1.6rem;
-  box-shadow: 0 18px 32px -12px rgba(0,0,0,0.08);
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  border: 1px solid rgba(249,115,22,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 36px -16px rgba(249,115,22,0.2);
-  border-color: rgba(249,115,22,0.3);
-  background: white;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
 }
 .card h3 {
   font-size: 1.7rem;
   margin-bottom: 0.8rem;
-  color: #1E2A5E;
+  color: #1e3a5f;
 }
 .card p {
-  color: #4b5563;
+  color: #475569;
   line-height: 1.45;
   margin-bottom: 1.5rem;
 }
-.card button {
+
+.card:nth-child(1) button {
   background: none;
-  border: 1.5px solid #F97316;
+  border: 1.5px solid #2e7d32;  
+  color: #2e7d32;
+}
+.card:nth-child(1) button:hover {
+  background: #2e7d32;
+  color: white;
+}
+.card:nth-child(2) button {
+  background: none;
+  border: 1.5px solid #d4a017;  
+  color: #b8860b;
+}
+.card:nth-child(2) button:hover {
+  background: #d4a017;
+  color: white;
+}
+.card:nth-child(3) button {
+  background: none;
+  border: 1.5px solid #2c5f8a;  
+  color: #2c5f8a;
+}
+.card:nth-child(3) button:hover {
+  background: #2c5f8a;
+  color: white;
+}
+.card:nth-child(4) button {
+  background: none;
+  border: 1.5px solid #8b5cf6;  
+  color: #7c3aed;
+}
+.card:nth-child(4) button:hover {
+  background: #8b5cf6;
+  color: white;
+}
+.card button {
   padding: 8px 20px;
   border-radius: 40px;
   font-weight: 600;
-  color: #F97316;
   cursor: pointer;
   transition: 0.2s;
-}
-.card button:hover {
-  background: #F97316;
-  color: white;
-  box-shadow: 0 6px 12px rgba(249,115,22,0.2);
 }
 .card-image-inside {
   width: 100%;
@@ -331,16 +359,16 @@ header {
 }
 .faculty-card {
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 28px;
   overflow: hidden;
   width: 250px;
   transition: all 0.3s ease;
-  box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
-  border: 1px solid #f0f0f0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
 }
 .faculty-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 28px 32px -12px rgba(249,115,22,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 28px -12px rgba(46, 125, 50, 0.15);
 }
 .faculty-card img {
   width: 100%;
@@ -349,18 +377,19 @@ header {
   transition: transform 0.4s ease;
 }
 .faculty-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 .faculty-card h3 {
   text-align: center;
   padding: 1.2rem 0;
   font-size: 1.4rem;
   background: #fff;
-  color: #1E2A5E;
+  color: #1e3a5f;
   letter-spacing: -0.3px;
 }
+
 .see-more {
-  background: linear-gradient(120deg, #1E2A5E, #F97316);
+  background: #2e7d32;
   border: none;
   padding: 12px 36px;
   border-radius: 50px;
@@ -371,16 +400,17 @@ header {
   margin: 1rem auto 0;
   cursor: pointer;
   transition: 0.25s;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 .see-more:hover {
+  background: #1b5e20;
   transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(249,115,22,0.3);
+  box-shadow: 0 8px 18px rgba(46, 125, 50, 0.2);
 }
 
 /* HIGHLIGHT BANNER */
 .highlight-banner {
-  background: linear-gradient(115deg, #1E2A5E 0%, #2C3E6E 100%);
+  background: linear-gradient(115deg, #1e3a5f 0%, #2e7d32 100%);
   margin: 3rem 2rem;
   border-radius: 48px;
   padding: 2rem 2rem;
@@ -392,7 +422,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1.5rem;
-  box-shadow: 0 18px 28px -12px rgba(30,42,94,0.4);
+  box-shadow: 0 12px 24px -12px rgba(30, 58, 95, 0.4);
 }
 .banner-text h3 {
   color: white;
@@ -400,22 +430,21 @@ header {
   margin-bottom: 0.3rem;
 }
 .banner-text p {
-  color: #ffedd5;
+  color: #e0f2fe;
   opacity: 0.9;
 }
 .banner-btn {
-  background: white;
+  background: #d4a017;  
   border: none;
   padding: 12px 30px;
   border-radius: 60px;
   font-weight: 800;
-  color: #1E2A5E;
+  color: white;
   cursor: pointer;
   transition: 0.2s;
 }
 .banner-btn:hover {
-  background: #F97316;
-  color: white;
+  background: #b8860b;
   transform: scale(1.02);
 }
 
@@ -444,7 +473,7 @@ footer {
   color: #cbd5e1;
 }
 .footer-links h4 {
-  color: #F97316;
+  color: #5b9bc5;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -455,7 +484,7 @@ footer {
   transition: 0.2s;
 }
 .footer-links p:hover {
-  color: #F97316;
+  color: #a5d6a5;  
   transform: translateX(3px);
 }
 .copyright {
@@ -467,7 +496,7 @@ footer {
   color: #94a3b8;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -527,5 +556,4 @@ footer {
   .btn-primary, .btn-outline {
     padding: 8px 20px;
   }
-}
 }
